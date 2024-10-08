@@ -1,0 +1,33 @@
+settings:
+  seed: 2024
+  
+tau: 0.8
+
+model:
+  model_dir: /path/to/pretrained_weights
+  esm_version: esm1b_t33_650M_UR50S # esm1v_t33_650M_UR90S_1 esm2_t33_650M_UR50D
+  pubmed_version: BiomedNLP-BiomedBERT-base-uncased-abstract # BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext
+
+model_name: AP_align_fuse
+prior_knowledge: /path/to/datasets/generated_desc.json
+
+dataset:
+  data_path: /path/to/datasets
+  max_length: 512
+
+train:
+  gpu_id: 1
+  batch_size: 24
+  align_epoch: 1
+  epochs: 50
+  lr: 5.0e-05
+  metrics: ['loss', 'accuracy', 'precision', 'recall', 'f1', 'auc', 'prc', 'mcc', 'oss', 'fpr']
+
+val:
+  batch_size: 24
+
+test:
+  batch_size: 24
+
+metric:
+  token_threshold: 0.5

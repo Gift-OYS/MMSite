@@ -1,0 +1,4 @@
+Due to size limitations, we have uploaded our ProTAD dataset to this anonymous URL: https://drive.google.com/file/d/1oyl9JVfEvDk72HdtFaPrRKgUDmI_AFHb/view?usp=sharing.
+In order to better reproduce the main experimental results of the paper, we have also uploaded the splitted training dataset, validation dataset, and test dataset at the clustering threshold at 10% in above anonymous URL.
+
+Our dataset is licensed under the CC BY 4.0 License.
