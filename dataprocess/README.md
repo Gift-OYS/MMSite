@@ -1,6 +1,6 @@
 ## This tutorial is about how to process data
 ### 1. Download data
-You should download the ProTAD dataset `protad.tsv` from the anonymous [Link](https://drive.google.com/file/d/1oyl9JVfEvDk72HdtFaPrRKgUDmI_AFHb/view?usp=sharing) and put this file in this folder.
+You should download the ProTAD dataset `protad.tsv` from [Link](https://drive.google.com/file/d/1oyl9JVfEvDk72HdtFaPrRKgUDmI_AFHb/view?usp=sharing) and put this file in this folder.
 
 (In order to better reproduce the main experimental results of the paper, we have also uploaded the splitted training dataset, validation dataset, and test dataset at the clustering threshold at 10% in above URL.)
 ### 2. Run the following codes to generate protad.fasta
@@ -33,7 +33,7 @@ python split.py
 ```
 You can put the generated `train.tsv`, `valid.tsv` and `test.tsv` into `datasets` folder.
 
-We also provide the our processed `train.tsv`, `valid.tsv` and `test.tsv` in above anonymous Link. You can download them and put them into `datasets` folder directly.
+We also provide the our processed `train.tsv`, `valid.tsv` and `test.tsv` in above Link. You can download them and put them into `datasets` folder directly.
 ### 5. Obtain generated descriptions from agent model
 Furthermore, as the agent model to generate descriptions during validation and testing, we use the pre-trained Prot2Text<sub>BASE</sub> model. You should follow the instruction below to obtain `generated_desc.json`.
 #### 5.1 Download the Pre-trained Model

@@ -23,8 +23,3 @@ You should put your data in the `dataset/infer.tsv` with the format like `datase
 ```bash
 python inference.py
 ```
-
-Note: We have cited other owner's original sources properly in our paper.
-
-Our code is licensed under the CC BY 4.0 License.
-
