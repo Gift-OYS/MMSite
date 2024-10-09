@@ -1,6 +1,8 @@
 ## This tutorial is about how to process data
 ### 1. Download data
 You should download the ProTAD dataset `protad.tsv` from the anonymous [Link](https://drive.google.com/file/d/1oyl9JVfEvDk72HdtFaPrRKgUDmI_AFHb/view?usp=sharing) and put this file in this folder.
+
+(In order to better reproduce the main experimental results of the paper, we have also uploaded the splitted training dataset, validation dataset, and test dataset at the clustering threshold at 10% in above URL.)
 ### 2. Run the following codes to generate protad.fasta
 ```python
 import pandas as pd
@@ -45,5 +47,3 @@ You can run the following command to generate descriptions `/path/to/datasets/ge
 ```bash
 python agent.py
 ```
-
-Note: We have cited other owner's original sources properly in our paper.
