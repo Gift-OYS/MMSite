@@ -1,5 +1,5 @@
 # MMSite: A Multi-modal Framework for the Identification of Active Sites in Proteins
-***Update 2024-10-29:*** The pretrained models are available at https://zenodo.org/records/14004698.
+***Update 2024-10-29:*** The pretrained models of MMSite are available at https://zenodo.org/records/14004698.
 ## 1. Preparation
 ### 1. Environment
 You can manage the environment by Anaconda. We have provided the environment configuration file `environment.yml` for reference. You can create the environment by the following command:
