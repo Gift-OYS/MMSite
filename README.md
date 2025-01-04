@@ -36,11 +36,11 @@ You can train the model by the following command (It takes about 7 hours to fini
 python train.py --config /path/to/config.yaml
 ```
 
-Then, you will get `best_model_fuse_xxx.pth` model in the `runs/timestamp` folder, which is the final model.
+Then, you will get `best_model_fuse_xxx.pt` model in the `runs/timestamp` folder, which is the final model.
 
 ## 3. Inference
 
-You should put your data in the `dataset/infer.tsv` with the format like `dataset/infer_samples.tsv`. Then, you should specify the path of `best_model_fuse_xxx.pth` in inference.py. Additionaly, you need to generate the textual descriptions via Prot2Text, and replace the corresponding configuration in `config/config.yaml` with the path of generated `generated_desc.json`. Finally, you can run the following command to get the prediction results:
+You should put your data in the `dataset/infer.tsv` with the format like `dataset/infer_samples.tsv`. Then, you should specify the path of `best_model_fuse_xxx.pt` in inference.py. Additionaly, you need to generate the textual descriptions via Prot2Text, and replace the corresponding configuration in `config/config.yaml` with the path of generated `generated_desc.json`. Finally, you can run the following command to get the prediction results:
 
 ```bash
 python inference.py
