@@ -17,7 +17,7 @@ _, device, pprint = prepare(config)
 
 model = get_model(pprint, config)
 bce_loss = nn.BCELoss()
-checkpoint_path_total = '/path/to/runs/timestamp/best_model_fuse_xxx.pth'
+checkpoint_path_total = '/path/to/runs/timestamp/best_model_fuse_xxx.pt'
 model.load_state_dict(torch.load(checkpoint_path_total))
 model = model.to(device)
 model.eval()

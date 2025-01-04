@@ -125,13 +125,15 @@ def fuse(checkpoint_align, train_loader, val_loader):
             exist_files = [f for f in os.listdir(config.train.save_path) if f'best_model_fuse' in f]
             for f in exist_files:
                 os.remove(os.path.join(config.train.save_path, f))
-            checkpoint_path_total = f"{config.train.save_path}/best_model_fuse_{best_f_score_token}.pth"
+            checkpoint_path_total = f"{config.train.save_path}/best_model_fuse_{best_f_score_token}.pt"
             pprint(f"Saving the best model to {checkpoint_path_total}")
-            torch.save(model, checkpoint_path_total)
+            torch.save(model.state_dict(), checkpoint_path_total)
     
     for k, v in best_metric_token.items():
         info_str_token += f"{k}: {v:.4f}, "
     pprint(info_str_token)
+
+    return checkpoint_path_total
 
 
 def evaluate(epochs, epoch, model, val_loader, bce_loss, align=False):
@@ -176,8 +178,9 @@ def evaluate(epochs, epoch, model, val_loader, bce_loss, align=False):
     return val_metric_dict_token, val_metric_dict_cl
 
 
-def test(checkpoint_path, test_loader):
-    model = torch.load(checkpoint_path, map_location=device)
+def test(model, checkpoint_path, test_loader):
+    model.load_state_dict(torch.load(checkpoint_path))
+    model = model.to(device)
     model.eval()
     test_metric_dict_token = {}
     for metric in config.train.metrics:
@@ -238,4 +241,4 @@ if __name__ == '__main__':
     pprint("Fusing ...")
     checkpoint_path_total = fuse(checkpoint_align, train_loader, val_loader)
     pprint("Testing ...")
-    test(checkpoint_path_total, test_loader)
+    test(model, checkpoint_path_total, test_loader)
