@@ -1,6 +1,6 @@
 # MMSite: A Multi-modal Framework for the Identification of Active Sites in Proteins
 
-***Update 2025-1-4:*** We have updated the pretrained fusion model on Zenodo at https://zenodo.org/records/14599105 to resolve the issue with the incorrect module import path.
+***Update 2025-1-4:*** We have updated the pretrained fusion model on Zenodo at https://zenodo.org/records/14599105 to resolve the issue with the incorrect module import path during inference.
 
 ~~***Update 2024-10-29:*** The pretrained models of MMSite are available at https://zenodo.org/records/14004698.~~
 
