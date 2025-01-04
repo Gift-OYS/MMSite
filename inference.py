@@ -18,7 +18,8 @@ _, device, pprint = prepare(config)
 model = get_model(pprint, config)
 bce_loss = nn.BCELoss()
 checkpoint_path_total = '/path/to/runs/timestamp/best_model_fuse_xxx.pth'
-model = torch.load(checkpoint_path_total, map_location=device)
+model.load_state_dict(torch.load(checkpoint_path_total))
+model = model.to(device)
 model.eval()
 
 test_dataset = MyDataset(config, 'infer')
