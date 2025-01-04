@@ -32,7 +32,7 @@ with torch.no_grad():
         anchor_seq_input_ids = batch[1]['input_ids'].to(device)
         anchor_seq_attention_mask = batch[1]['attention_mask'].to(device)
         length = batch[3]
-        
+
         output = model(anchor_text_input_ids=anchor_text_input_ids, anchor_text_attention_mask=anchor_text_attention_mask,
                         anchor_seq_input_ids=anchor_seq_input_ids, anchor_seq_attention_mask=anchor_seq_attention_mask, test=True)
         token_predictions = (output['token_logits'] > token_threshold).float()
